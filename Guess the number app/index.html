@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System: Number Leveling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="default-mode">
+    <div class="scanlines"></div>
+
+    <div class="theme-switch">
+        <span><b>DARK MODE</b></span>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="game-container" id="mainContainer">
+        <div class="rank-badge" id="rankBadge">RANK: ?</div>
+        <h1 class="system-title">SYSTEM INTERFACE</h1>
+        <p id="instruction">INITIALIZE HUNTER RANK TO START QUEST</p>
+
+        <div class="mode-buttons">
+            <button class="btn btn-easy" onclick="setMode('easy')">E-RANK</button>
+            <button class="btn btn-medium" onclick="setMode('medium')">B-RANK</button>
+            <button class="btn btn-hard" onclick="setMode('hard')">S-RANK</button>
+        </div>
+
+        <div id="gameplay-section" class="hidden">
+            <div class="input-wrapper">
+                <input type="number" id="guessInput" placeholder="VALUE">
+            </div>
+            <button id="guessBtn" class="btn-execute">EXECUTE ATTACK</button>
+            <p id="feedback"></p>
+            
+            <div class="stats">
+                <span>ATTEMPTS: <span id="attemptCount">0</span></span>
+            </div>
+            
+            <button id="resetBtn" class="btn-reset">RE-INITIALIZE SYSTEM</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
